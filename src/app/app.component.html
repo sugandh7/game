@@ -1,0 +1,25 @@
+
+
+
+ <table style="border:5px solid black">
+<div *ngFor="let i of array1">
+	<span *ngFor="let j of i">
+    
+    <span *ngIf="j==1">
+      <td style="background-color:red; height:20px; width:20px;border:5px solid black;border-radius:10px"></td>
+    </span>
+    <span *ngIf="j==2">
+       <td style="background-color:green; height:20px; width:20px;border:5px solid black;border-radius:10px"></td>
+    </span>
+    <span *ngIf="j==0">
+        <td style="background-color:none; height:20px; width:20px;border:5px solid black ;border-radius:10px"></td>
+    </span>
+   	</span>
+</div>
+</table>
+<div>
+	<input type="number" #m  >
+	<button [disabled]='flag' (click)="change(m)">button</button><br>
+  <a [hidden]='flagred' class="text-center">red wins</a><br>
+  <a [hidden]='flaggreen' class="text-center"> green wins</a>
+</div>
